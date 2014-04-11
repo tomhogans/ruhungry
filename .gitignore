@@ -9,3 +9,5 @@ src/*.egg-info
 lib
 lib64
 .venv
+db.sqlite3
+*.pyc
