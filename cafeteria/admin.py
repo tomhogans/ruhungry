@@ -1,6 +1,9 @@
 from django.contrib import admin
-from ruhungry.models import Station, Food, Order
+from cafeteria.models import Station, Food, Order
 
+
+class FoodAdmin(admin.ModelAdmin):
+    list_display = ('name', 'price', 'station')
 
 class OrderAdmin(admin.ModelAdmin):
     #list_display = ('user', '')
@@ -8,5 +11,5 @@ class OrderAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Station)
-admin.site.register(Food)
+admin.site.register(Food, FoodAdmin)
 admin.site.register(Order, OrderAdmin)
